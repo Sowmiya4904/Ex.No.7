@@ -1,171 +1,133 @@
 # Exno.7-Develop a prompt-based application tailored to their personal needs, fostering creativity and practical problem-solving skills while leveraging the capabilities of large language models.
 
-# Date:12/10/2025
-# Register no:212222020028
-# Aim: To develop a prompt-based application using ChatGPT - To demonstrate how to create a prompt-based application to organize daily tasks, showing the progression from simple to more advanced prompt designs and their corresponding outputs.
+<br># Date: 13/11/2025
 
-# AI Tools Required: 
-Deep Seek
+<br># Register no. 212222020028
 
-# Explanation: 
-Prompt:
-"Design a personal productivity assistant that can help manage daily tasks, schedule reminders, suggest wellness tips, and answer general queries. The assistant should interact using natural language and be adaptable to the user’s changing preferences over time."
-Procedure:
-1. Define the core requirements of a personal productivity assistant.
-2. Identify and construct appropriate prompts for each task using an LLM (e.g., ChatGPT).
-3. Simulate natural user interaction through a simple interface or command-line system.
-4. Collect feedback or inputs from users and adapt responses accordingly.
-5. (Optional) Integrate basic memory to simulate preference adaptation.
-EXPECTED OUTPUT: - (attached the drive link)
-Output (Example Response by LLM):
-Personal Productivity Assistant Features:
-1. Daily Task Manager:
-o Accept tasks via natural language (e.g., "Remind me to call mom at 6 PM").
-o Organize tasks by priority and deadline.
-o Provide daily summaries and pending items.
-2. Smart Scheduler:
-o Schedule events and set reminders using contextual understanding.
-o Notify user of overlapping appointments or free time slots.
-3. Wellness Tips Generator:
-o Suggest daily wellness advice (hydration, exercise, screen-time breaks).
-o Adapt suggestions based on past user preferences and responses.
 
-# 1. Core Requirements & Simple Prompts
+<br> **Aim:** 
+     <br> To develop a prompt-based application using ChatGPT - To demonstrate how to create a prompt-based application to organize daily tasks, showing the progression from simple to more advanced prompt designs and their corresponding outputs.
 
-Features: Basic task management, scheduling, wellness tips, and queries. Interaction: Command-line style with natural language inputs.
-## a. Daily Task Manager
+<br>**AI Tools Required:**
+<br>Lovable AI, ChatGPT
 
-Prompt Example: "Extract task, time, and priority from: '[User Input]'. Respond in JSON with keys: task, time, priority (high/medium/low)."
 
-User Input: "Remind me to call Mom at 6 PM."
+<br>**Explanation:**
 
-Output:
-json
-{ "task": "Call Mom", "time": "18:00", "priority": "medium" }
-## b. Smart Scheduler
+<br>**Prompt:**
+<br>"Design a personal productivity assistant that can help manage daily tasks, schedule reminders, suggest wellness tips, and answer general queries. The assistant should interact using natural language and be adaptable to the user’s changing preferences over time."
 
-Prompt Example: "Check if '[new event time]' conflicts with existing events: [existing events]. Respond with 'Conflict: Yes/No' and a summary."
+<br>Procedure:
 
-User Input: "Schedule a meeting at 3 PM tomorrow."
+<br>1. Define the core requirements of a personal productivity assistant.
+<br>2. Identify and construct appropriate prompts for each task using an LLM (e.g., ChatGPT).
+<br>3. Simulate natural user interaction through a simple interface or command-line system.
+<br>4. Collect feedback or inputs from users and adapt responses accordingly.
+<br>5. (Optional) Integrate basic memory to simulate preference adaptation.
 
-Output:
+<br> **OUTPUT:** - (attached the drive link)
 
-"No conflict. Added 'Meeting' at 15:00 tomorrow."
-c. Wellness Tips Generator
+<br>Output (Example Response by LLM):
 
-Prompt Example: "Suggest a wellness tip from: hydration, stretching, screen breaks. Avoid: [user disliked tips]."
+<br>Personal Productivity Assistant Features:
 
-Output:
+<br>1. Daily Task Manager:
+<br>o Accept tasks via natural language (e.g., "Remind me to call mom at 6 PM").
+<br>o Organize tasks by priority and deadline.
+<br>o Provide daily summaries and pending items.
 
-*"Tip: Take a 5-minute screen break every hour to reduce eye strain!"*
+<br>2. Smart Scheduler:
+<br>o Schedule events and set reminders using contextual understanding.
+<br>o Notify user of overlapping appointments or free time slots.
 
-# 2. Intermediate: Contextual Understanding
+<br>3. Wellness Tips Generator:
+<br>o Suggest daily wellness advice (hydration, exercise, screen-time breaks).
+<br>o Adapt suggestions based on past user preferences and responses.
 
-Enhancements: Conflict detection, priority sorting, basic user preferences.
-## a. Conflict Detection
-Prompt Example: "User input: '[event request]'. Existing events: [list]. Identify overlaps and respond with a warning if conflicts exist."
-User Input: "Add yoga class at 5 PM today."
+<br>**Output:**
 
-Output:
+<br>**Prompt:**
 
-"Warning: Conflicts with 'Team Meeting' (17:00–18:00). Reschedule?"
-## b. Priority-Based Task Sorting
+<br>**🧠 System Prompt**
 
-Prompt Example: "Sort tasks by priority (high > medium > low): [task list]. Format as a numbered list."
+<br>You are Focusly, an intelligent Study and Focus Assistant built to help 🎓 students manage their study sessions, reduce distractions, summarize notes, generate quick quizzes, and stay motivated throughout the day.
+<br>You adapt to the student’s learning speed, focus level, and mood using natural conversation.
 
-Output:
+<br>**Output:**
+<br>**Study and Focus Assistant Features**
 
-markdown
-1. [High] Submit report by 17:00  
-2. [Medium] Call Mom at 18:00  
-3. [Low] Buy groceries
-3. Advanced: Adaptive Memory & Natural Interaction
-# 3. Advanced: Adaptive Memory & Natural Interaction
-## Enhancements:
+<br>**1. Smart Study Scheduler**
 
-Simulated memory for preferences, personalized responses
-## a. Wellness Tips with Memory
+<br>* Understands natural inputs like “Schedule a 2-hour study session for tomorrow evening.”
+<br> * Divides long study sessions into focused intervals (e.g., Pomodoro cycles).
+<br>* Suggests ideal study times based on the user’s past performance and activity level.
 
-Prompt Example: "User previously disliked 'hydration' tips. Suggest a new tip. Options: meditation, walking, ergonomics."
 
-Output:
+<br>**2. Distraction Manager**
 
-*"How about a 10-minute walk? It boosts energy and focus!"*
+<br>* Detects phrases like “I feel tired” or “I keep checking my phone.”
+<br>* Provides short focus exercises or motivational quotes.
+<br>* Suggests digital detox techniques and timeouts.
 
-## b. User Preference Adaptation
 
-Simulated Memory (JSON):
+<br>**3. Smart Note Summarizer**
 
-json
-{ "disliked_tips": ["hydration"], "preferred_time": "morning" }
+<br>* Summarizes large text files, PDFs, or notes into bullet points.
+<br>* Highlights key concepts and formulas automatically.
 
-Prompt Example: "Generate a morning wellness tip based on user preferences: [memory]."
+<br> **4. Quick Quiz Generator**
 
-Output:
+<br>* Creates short quizzes or multiple-choice questions based on uploaded notes.
+<br> * Tracks quiz results to recommend weak topics for revision.
 
-"Start your day with 5 minutes of meditation!"
+<br> **5. Motivation and Mental Wellness Support**
 
-## c. Natural Language Interaction
+<br>* Sends friendly reminders like “Hydrate and stretch!” or “You’ve studied for 2 hours — great progress!”
+<br>* Tracks user mood and suggests breaks or motivational playlists.
 
-Prompt Example: "Respond conversationally to the user's task list request: [tasks]."
+**User Profile**
+```
+Name: Sowmiya.G
 
-User Input: "What’s on my schedule today?"
+Study Goal: 2 focused sessions per day
 
-Output:
+Preferred Method: Pomodoro (25 min study + 5 min break)
 
-*"Here’s your day:
+Learning Focus: Biomedical concepts
 
-10:00 AM: Project meeting (high priority)
+Tone: Supportive, cheerful, and motivating
+```
 
-3:00 PM: Email clients (medium)
+**Flow:**
+```
+User Input (Prompt)
+        ↓
+Prompt Interpretation by LLM
+        ↓
+Feature Module Triggered
+ (Scheduler / Summarizer / Quiz / Motivation)
+        ↓
+Response Generation by LLM
+        ↓
+User Feedback or New Prompt
+        ↓
+Adaptive Learning / Updated Response
 
-7:00 PM: Gym (low)
-Need adjustments?"*
-# 4. Optional: Feedback Loop & Interface Simulation
+```
 
-Feedback Collection: After each action, ask: "Was this helpful? (Yes/No)"
+<img width="1053" height="655" alt="Screenshot 2025-10-25 140944" src="https://github.com/user-attachments/assets/8c632c06-1376-4876-82fc-031b78c85e4f" />
 
-If "No": "Noted! I’ll adjust future suggestions."
 
-Command-Line Simulation (Python Pseudocode):
-python
+<br><img width="985" height="292" alt="image" src="https://github.com/user-attachments/assets/92e4fb45-2167-49e8-8734-911674d51535" />
 
-while True:
-    user_input = input("You: ")
-    if "add task" in user_input:
-        # Trigger task manager prompt
-    elif "wellness tip" in user_input:
-        # Fetch tip from memory-adapted prompt
-    # ... other actions
-## Expected Output Example
 
-User: "Plan a blog draft and a dentist appointment at 2 PM tomorrow."
-## Assistant:
 
-json
-{
-  "tasks": [
-    { "task": "Write blog draft", "time": "Flexible", "priority": "high" },
-    { "task": "Dentist appointment", "time": "14:00", "priority": "medium" }
-  ],
-  "summary": "Added 2 tasks. No schedule conflicts detected!"
-}
+<br>**Result:**
 
-User: "What wellness tip do you recommend?"
-## Assistant (Adaptive):
+<br>The lab exercise resulted in the creation of a prototype concept for a personal assistant powered by large language models. Students were able to:
 
-"Since you enjoy fresh air: Take a walk outside for 10 minutes!"
 
-Progression Summary:
-
-Simple: Structured prompts for task extraction.
-
-Intermediate: Context-aware scheduling and sorting.
-Advanced: Memory-driven personalization and natural dialogue.
-# Result: 
-The lab exercise resulted in the creation of a prototype concept for a personal assistant powered by large language models. Students were able to:
- Understand how to tailor LLM prompts to real-life applications.
- Foster creativity by designing features suited to their personal or academic lives.
- Learn prompt engineering techniques for optimal interaction with AI tools.
- Experience the versatility and utility of generative AI in solving everyday problems.
-[EXP-7.pdf](https://github.com/user-attachments/files/22871313/EXP-7.pdf)
+<br> Understand how to tailor LLM prompts to real-life applications.
+<br> Foster creativity by designing features suited to their personal or academic lives.
+<br> Learn prompt engineering techniques for optimal interaction with AI tools.
+<br> Experience the versatility and utility of generative AI in solving everyday problems.
